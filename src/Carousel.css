@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence:SCAN@-10&family=Tiny5&display=swap');
+
+/* @keyframes rotation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+} */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("/back.png"); */
+    background-size: cover;
+    /* background-position: center; */
+
+}
+
+.carousel .carousel-slides {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .carousel-slides .carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .carousel-slides .carousel-slide .candetail {
+    --left:0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel .carousel-slides .carousel-slide .candetail .can {
+    background: var(--sticker) var(--left) 0px, url("/cane.png");
+    background-size: auto 100%;
+    width: 300px;
+    aspect-ratio: 1/2.1;
+    background-blend-mode: multiply;
+    mask-image: url("/cane.png");
+    mask-size: auto 100%;
+    transition: 1s;
+    animation-name: rotation; /* Apply the rotation animation */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.carousel .carousel-slides .carousel-slide .candetail .can:hover {
+    transform: translateY(3vh) translateX(4vw) rotateZ(-20deg);
+    --left: 1000px;
+    scale: 1.1;
+    transition: 1s; /* Ensure transition is applied to transform */
+}
+
+.carousel .carousel-slides .carousel-slide .slide-description {
+    color: white;
+    width: 400%;
+    height: 70%;
+    font-family: "Roboto Mono", monospace;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel .carousel-slides .carousel-slide .slide-description h1 {
+    /* Title styles here */
+    font-size: 4.5rem;
+    color: #ff2d2d;
+}
+
+.carousel .carousel-slides .carousel-slide .slide-description h2 {
+    /* Subtitle styles here */
+    font-size: 3rem;
+    color: #2d4cff;
+}
+
+.carousel .carousel-slides .carousel-slide .slide-description h3 {
+    /* Description styles here */
+    font-size: 2rem;
+}
+
+.carousel .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel .carousel-arrow.left {
+    left: 10px; /* Adjust position */
+}
+
+.carousel .carousel-arrow.right {
+    right: 10px; /* Adjust position */
+}
+
+.carousel .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+#get{
+    height: 4rem;
+    width: 15rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    background-color: #2d7aff;
+    transition: .6s;
+}
+
+#get:hover{
+    background-color: rgb(78, 199, 26);
+    transition: .6s;
+    cursor: pointer;
+}
+
