@@ -58,6 +58,7 @@
     /* top: -5%;
     transform: translateX(-50%,-50%); */
     font-family: "Roboto Mono", monospace;
+    /* background-color: red; */
 }
 
 #model .product .canedetail .caneLeft h1{
@@ -74,6 +75,7 @@
 }
 
 #model .product .canedetail .cane{
+    position: absolute;
     /* width: 80%; */
     background: 
     var(--sticker) var(--left) 0px,
@@ -107,6 +109,17 @@
     transition: 1s;
     scale: 1.14;
 }
+/* 
+#grad {
+    color: #fff;
+    -webkit-text-stroke: 2px #000; 
+    text-shadow: 
+      2px 2px 0 #000,
+      -2px 2px 0 #000,
+      2px -2px 0 #000,
+      -2px -2px 0 #000,
+      4px 4px 0 rgba(0, 0, 0, 0.5); 
+} */
   
 /* #model .product .canedetail:hover .caneText {
     display: block;

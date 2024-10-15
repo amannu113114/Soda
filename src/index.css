@@ -14,4 +14,12 @@ body{
   background: linear-gradient(to right, #153A7E, #3686DB);
   backdrop-filter: blur(20px);
   color: white;
+  overflow: hidden;
 }
+
+/* index.css */
+[data-scroll-container] {
+  overflow: hidden;
+  position: relative;
+}
+

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Carousel.css'; // Optional: For custom styling
-
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slides = [
@@ -55,6 +54,7 @@ const Carousel = () => {
     };
 
     return (
+        <div>
         <div
             className="carousel"
             style={{
@@ -95,6 +95,8 @@ const Carousel = () => {
                     />
                 ))}
             </div>
+        </div>
+        
         </div>
     );
 };
